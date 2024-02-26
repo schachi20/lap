@@ -1,4 +1,3 @@
-#free -m > test.txt && nmcli >> test.txt && lsblk >> test.txt
 # IP-Adresse abrufen und in die Datei schreiben
 ip addr show | grep 'inet ' | awk '{print $2}' > Linux_Sysinfos.txt
 
@@ -14,5 +13,5 @@ free -h | grep 'Mem' | awk '{print "Arbeitsspeicher: " $2}' >> Linux_Sysinfos.tx
 # Festplattenspeicherinformationen abrufen und in die Datei schreiben
 df -h | grep '/dev/' | awk '{print "Festplattenspeicher: " $2}' >> Linux_Sysinfos.txt
 
-#Ausgabe der Systeminformationen in eine Datei vereinfacht
-#nmcli > Linux_Sysinfos.txt && free >> Linux_Sysinfos.txt && lsblk >> Linux_Sysinfos.txt
+# Ausgabe der Systeminformationen in eine Datei vereinfacht
+# nmcli > Linux_Sysinfos.txt && free >> Linux_Sysinfos.txt && lsblk >> Linux_Sysinfos.txt
