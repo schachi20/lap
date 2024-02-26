@@ -1,4 +1,4 @@
-free -m > test.txt && nmcli >> test.txt && lsblk >> test.txt
+#free -m > test.txt && nmcli >> test.txt && lsblk >> test.txt
 # IP-Adresse abrufen und in die Datei schreiben
 ip addr show | grep 'inet ' | awk '{print $2}' > Linux_Sysinfos.txt
 
