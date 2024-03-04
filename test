@@ -8,7 +8,7 @@ ip link show | awk '/ether/ {print $2}' >> Linux_Sysinfos.txt
 ip route | awk '/default/ {print $3}' >> Linux_Sysinfos.txt
 
 # Arbeitsspeicherinformationen abrufen und in die Datei schreiben
-head -1 /proc/meminfo | grep 'MemTotal' | awk '{print "RAM: " $2}' >> Linux_Sysinfos.txt
+awk 'NR==1' /proc/meminfo >> Linux_Sysinfos.txt
 
 # Festplattenspeicherinformationen abrufen und in die Datei schreiben
 df -h | grep '/dev/' | awk '{print "Festplattenspeicher: " $2}' >> Linux_Sysinfos.txt
