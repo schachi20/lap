@@ -1,4 +1,5 @@
 
+    <<comment
     # Geben sie root das gleiche Password wie dem Windows Server
     # Login als root-User
     root@<MySystem>:  passwd
@@ -53,7 +54,7 @@
     usermod -U "Anton.Steiner"
 
     Ausgabe der Systeminformationen in eine Datei
-
+comment
     # IP-Adresse abrufen und in die Datei schreiben
     ip addr show | grep 'inet ' | awk '{print $2}' > Linux_Sysinfos.txt
 
