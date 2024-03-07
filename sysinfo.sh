@@ -2,10 +2,10 @@
 ip addr show | grep 'inet ' | awk '{print "IP-Adresse: " $2}' > Linux_Sysinfos.txt
 
 # Gateway-Adresse abrufen und in die Datei schreiben
-ip route | awk '/default/ {print $3}' >> Linux_Sysinfos.txt
+ip route | awk '/default/ {print "Gateway: " $3}' >> Linux_Sysinfos.txt
 
 # MAC-Adresse abrufen und in die Datei schreiben
-ip link show | awk '/ether/ {print $2}' >> Linux_Sysinfos.txt
+ip link show | awk '/ether/ {print "MAC: " $2}' >> Linux_Sysinfos.txt
 
 # Arbeitsspeicherinformationen abrufen und in die Datei schreiben
 awk 'NR==1' /proc/meminfo >> Linux_Sysinfos.txt
