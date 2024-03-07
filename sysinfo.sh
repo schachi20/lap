@@ -1,5 +1,5 @@
 # IP-Adresse abrufen und in die Datei schreiben
-ip addr show | grep 'inet ' | awk '{print $2}' > Linux_Sysinfos.txt
+ip addr show | grep 'inet ' | awk '{print "IP-Adresse: " $2}' > Linux_Sysinfos.txt
 
 # Gateway-Adresse abrufen und in die Datei schreiben
 ip route | awk '/default/ {print $3}' >> Linux_Sysinfos.txt
